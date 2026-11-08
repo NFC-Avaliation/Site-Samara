@@ -135,9 +135,11 @@ h2 em { color: var(--berry); font-family: var(--subtitle-font); font-size: .78em
 .cream-scene.is-playing .deep-stria { animation: deepStria 7.6s ease-in-out infinite; }
 .cream-scene.is-playing .collagen-bundle { animation: fiberDepth 7.6s ease-in-out infinite; }
 .cream-scene.is-playing .cream-bead { animation: creamBead 7.6s ease-in-out infinite; }
-.method-panels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; padding: 10px; }
-.method-stage { position: relative; min-width: 0; overflow: hidden; border: 1px solid rgba(165,70,124,.13); border-radius: 20px; background: rgba(255,255,255,.72); box-shadow: 0 12px 30px rgba(115,43,84,.07); }
-.stage-heading { min-height: 108px; padding: 19px 18px 4px; }
+.method-panels { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; padding: 10px; }
+.method-stage { position: relative; grid-column: span 2; min-width: 0; overflow: hidden; border: 1px solid rgba(165,70,124,.13); border-radius: 20px; background: rgba(255,255,255,.72); box-shadow: 0 12px 30px rgba(115,43,84,.07); }
+.method-stage:nth-child(4) { grid-column: 2 / span 2; }
+.method-stage:nth-child(5) { grid-column: 4 / span 2; }
+.stage-heading { min-height: 126px; padding: 19px 18px 4px; }
 .stage-heading > span { color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: .16em; }
 .stage-heading h3 { margin: 6px 0 4px; color: var(--berry); font-family: var(--subtitle-font); font-size: clamp(16px, 1.6vw, 21px); font-weight: 600; line-height: 1.2; }
 .stage-heading p { margin: 0; color: #866d7e; font-size: 10px; line-height: 1.4; }
@@ -154,15 +156,23 @@ h2 em { color: var(--berry); font-family: var(--subtitle-font); font-size: .78em
 .stage-two .active-drops { opacity: 0; }
 .stage-two .active-drops { transform-box: view-box; transform-origin: center; }
 .stage-two .microchannels { opacity: .22; }
-.stage-three .organized-fibers { stroke-dasharray: 520; stroke-dashoffset: 0; }
-.stage-three .recovery-glow { fill: #fff; opacity: .28; filter: drop-shadow(0 0 6px rgba(255,255,255,.9)); }
+.stage-three .wound-marks { opacity: .7; }
+.stage-four .aftercare-film path { stroke-dasharray: 360; stroke-dashoffset: 360; }
+.stage-four .aftercare-glints { opacity: .55; }
+.stage-four .product-label { fill: #805d73; font-size: 7px; font-weight: 750; letter-spacing: .3px; }
+.stage-five .organized-fibers { stroke-dasharray: 520; stroke-dashoffset: 0; }
+.stage-five .recovery-glow { fill: #fff; opacity: .28; filter: drop-shadow(0 0 6px rgba(255,255,255,.9)); }
 .method-panels.is-playing .stage-one .stage-stria { animation: striaPulse 8.4s ease-in-out infinite; }
 .method-panels.is-playing .stage-one .stage-one-surface { animation: striaSurface 8.4s ease-in-out infinite; }
 .method-panels.is-playing .stage-two .needle-only { animation: needleCycle 8.4s cubic-bezier(.45,0,.55,1) infinite; }
 .method-panels.is-playing .stage-two .microchannels { animation: channelPulse 8.4s ease-in-out infinite; }
 .method-panels.is-playing .stage-two .active-drops { animation: activeSerum 8.4s ease-in-out infinite; }
-.method-panels.is-playing .stage-three .organized-fibers { animation: fiberRecovery 8.4s ease-in-out infinite; }
-.method-panels.is-playing .stage-three .recovery-glow { animation: skinGlow 8.4s ease-in-out infinite; }
+.method-panels.is-playing .stage-three .wound-marks { animation: woundPulse 8.4s ease-in-out infinite; }
+.method-panels.is-playing .stage-four .aftercare-film path { animation: aftercareSweep 7.6s ease-in-out infinite; }
+.method-panels.is-playing .stage-four .aftercare-glints { animation: aftercareShine 4.2s ease-in-out infinite; }
+.method-panels.is-playing .stage-four .aftercare-drops { animation: activeSerum 7.6s ease-in-out infinite; }
+.method-panels.is-playing .stage-five .organized-fibers { animation: fiberRecovery 8.4s ease-in-out infinite; }
+.method-panels.is-playing .stage-five .recovery-glow { animation: skinGlow 8.4s ease-in-out infinite; }
 .source-infographic { margin: 9px 6px 2px; color: #805d73; font-size: 10px; }
 .source-infographic summary { width: fit-content; cursor: pointer; color: var(--berry); font-weight: 700; }
 .source-infographic img { width: 100%; height: auto; margin-top: 10px; border-radius: 12px; }
@@ -178,6 +188,9 @@ h2 em { color: var(--berry); font-family: var(--subtitle-font); font-size: .78em
 @keyframes activeSerum { 0%,18%,62%,100% { opacity: 0; transform: translateY(-5px); } 24% { opacity: 1; transform: translateY(0); } 47% { opacity: 1; transform: translateY(42px); } 56% { opacity: 0; transform: translateY(48px); } }
 @keyframes fiberRecovery { 0%,56%,100% { opacity: .78; stroke-dashoffset: 520; } 68%,91% { opacity: 1; stroke-dashoffset: 0; } }
 @keyframes skinGlow { 0%,56%,100% { opacity: .22; } 68%,91% { opacity: .82; } }
+@keyframes woundPulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+@keyframes aftercareSweep { 0%,10% { stroke-dashoffset: 360; } 48%,78% { stroke-dashoffset: 0; } 90%,100% { stroke-dashoffset: -360; } }
+@keyframes aftercareShine { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
 
 .method-section { background: var(--cream); }
 .method-heading { margin-bottom: 32px; }
@@ -190,7 +203,8 @@ h2 em { color: var(--berry); font-family: var(--subtitle-font); font-size: .78em
 
 .testimonials-section { background: linear-gradient(180deg, #fff9fc, #fbe4f0 88%, #fac7e1); }
 .testimonials-section .section-heading { margin-bottom: 38px; }
-.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; width: min(var(--page-width), 100%); margin: auto; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; width: min(var(--page-width), 100%); margin: auto; }
+.testimonial-card:last-child:nth-child(3n + 1) { grid-column: 2; }
 .testimonial-card { position: relative; display: flex; flex-direction: column; min-width: 0; padding: 14px; border-radius: 22px; background: rgba(255,255,255,.53); }
 .whatsapp-print-label { display: flex; align-items: center; gap: 7px; margin: 1px 2px 11px; color: #426b5b; font-size: 10px; font-weight: 700; letter-spacing: .02em; }
 .whatsapp-print-label span { display: grid; width: 19px; height: 19px; place-items: center; border-radius: 50%; background: rgba(37,153,105,.13); color: #21875d; font-size: 12px; }
@@ -213,6 +227,8 @@ h2 em { color: var(--berry); font-family: var(--subtitle-font); font-size: .78em
 .contact-content h2 { max-width: 620px; margin-bottom: 17px; font-size: clamp(45px, 5.5vw, 70px); }
 .contact-content > p:not(.eyebrow) { max-width: 470px; margin-bottom: 24px; color: #6e4c61; font-size: 14px; }
 .contact-actions { display: flex; gap: 12px; }
+.contact-actions .button { gap: 10px; }
+.social-icon { flex: 0 0 18px; width: 18px; height: 18px; }
 .contact-placeholder { border-color: rgba(255,255,255,.74); }
 .button-outline { color: var(--berry); border-color: rgba(165,70,124,.42); background: rgba(255,255,255,.28); }
 .button-outline:hover { background: rgba(255,255,255,.55); }
@@ -253,9 +269,10 @@ html.motion-ready .wipe-in:not(.is-visible) { clip-path: inset(0 100% 0 0); }
   .cream-points { max-width: 530px; }
   .infographic-frame { width: min(720px, 100%); margin: auto; }
   .testimonial-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .testimonial-card:last-child { grid-column: auto; max-width: none; }
+  .testimonial-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
   .method-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .method-stage:last-child { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
+  .method-stage, .method-stage:nth-child(4) { grid-column: auto; }
+  .method-stage:nth-child(5) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
   .contact-section { flex-direction: column; align-items: flex-start; gap: 32px; padding-inline: 8vw; }
   .contact-portrait { align-self: center; }
   .site-footer { flex-wrap: wrap; gap: 12px 24px; }
@@ -323,12 +340,12 @@ html.motion-ready .wipe-in:not(.is-visible) { clip-path: inset(0 100% 0 0); }
   .stage-heading { min-height: 0; padding: 17px 17px 3px; }
   .stage-heading h3 { font-size: 20px; }
   .stage-heading p { font-size: 11px; }
-  .method-stage:last-child { grid-column: auto; width: 100%; }
+  .method-stage:nth-child(5) { grid-column: auto; width: 100%; }
   .stage-art { max-width: 430px; margin: auto; }
   .method-footnote { align-items: flex-start; text-align: left; }
   .method-footnote p { font-size: 10px; }
   .testimonial-grid { grid-template-columns: 1fr; gap: 11px; }
-  .testimonial-card, .testimonial-card:last-child { grid-column: auto; max-width: none; padding: 12px; }
+  .testimonial-card, .testimonial-card:last-child { grid-column: auto; width: auto; max-width: none; padding: 12px; }
   .contact-section { min-height: 0; flex-direction: column; align-items: flex-start; gap: 35px; padding: 75px 24px; }
   .contact-content h2 { font-size: clamp(44px, 12vw, 62px); }
   .contact-content > p:not(.eyebrow) { font-size: 12px; }

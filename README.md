@@ -1,6 +1,6 @@
 # Protótipo — Samara F. Krevei
 
-Página institucional demonstrativa para apresentar o método Micro Derme.
+Página institucional para apresentar o método Microderme.
 
 ## Prévia direta
 
