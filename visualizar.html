@@ -364,6 +364,7 @@ html.motion-ready .wipe-in:not(.is-visible) { clip-path: inset(0 100% 0 0); }
   .method-footnote p { font-size: 10px; }
   .testimonial-grid { grid-template-columns: 1fr; gap: 11px; }
   .testimonial-card, .testimonial-card:last-child { grid-column: auto; width: auto; max-width: none; padding: 12px; }
+  .testimonial-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: 100%; max-width: none; justify-self: stretch; }
   .contact-section { min-height: 0; flex-direction: column; align-items: stretch; gap: 35px; padding: 68px 22px; }
   .contact-content { width: 100%; }
   .contact-content h2 { font-size: clamp(44px, 12vw, 62px); }
