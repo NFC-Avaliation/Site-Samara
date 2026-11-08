@@ -1,18 +1,25 @@
+document.addEventListener("DOMContentLoaded", () => {
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-const revealItems = document.querySelectorAll(".reveal, .wipe-in");
+const revealItems = document.querySelectorAll(".reveal, .wipe-in, .motion-scene");
+document.documentElement.classList.add("motion-ready");
 
 if (reducedMotion || !("IntersectionObserver" in window)) {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+  document.querySelectorAll(".motion-scene").forEach((scene) => scene.classList.add("is-playing"));
 } else {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const delay = Number(entry.target.dataset.delay || 0);
-      entry.target.style.setProperty("--delay", `${delay}ms`);
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        const delay = Number(entry.target.dataset.delay || 0);
+        entry.target.style.setProperty("--delay", `${delay}ms`);
+        entry.target.classList.add("is-visible");
+        entry.target.classList.add("is-playing");
+      } else {
+        entry.target.classList.remove("is-visible");
+        entry.target.classList.remove("is-playing");
+      }
     });
-  }, { threshold: 0.15, rootMargin: "0px 0px -45px 0px" });
+  }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
 
   revealItems.forEach((item) => revealObserver.observe(item));
 }
@@ -40,14 +47,5 @@ document.addEventListener("click", (event) => {
   menuToggle?.setAttribute("aria-expanded", "false");
 });
 
-const toast = document.querySelector(".toast");
-let toastTimer;
-document.querySelectorAll(".contact-placeholder").forEach((button) => {
-  button.addEventListener("click", () => {
-    const channel = button.dataset.channel;
-    toast.textContent = `O link oficial do ${channel} será adicionado quando você enviar o endereço.`;
-    toast.classList.add("visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("visible"), 3400);
-  });
 });
+

@@ -32,7 +32,7 @@
 
     <main>
       <section class="hero" id="inicio">
-        <img class="hero-photo" src="assets/esteticista-ilustrativa.png" alt="Esteticista fictícia em uma clínica clara e acolhedora" />
+        <img class="hero-photo" src="assets/esteticista-samara-frontal.jpg" alt="Samara F. Krevei, esteticista, em seu consultório" fetchpriority="high" />
         <div class="hero-wash"></div>
         <div class="hero-content">
           <p class="eyebrow hero-eyebrow"><span class="eyebrow-dot"></span> Estrias · Cicatrizes · Cuidado estético</p>
@@ -53,20 +53,18 @@
         <div class="section-heading reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span> A pele tem sua própria história</p>
           <h2>Um caminho de cuidado, <em>passo a passo.</em></h2>
-          <p>Veja abaixo uma imagem demonstrativa que será substituída por registros reais e autorizados.</p>
+          <p>Registros reais enviados pela profissional. Cada pele responde de um jeito e os resultados podem variar.</p>
         </div>
-        <div class="comparison-card glass reveal" data-delay="100">
-          <div class="comparison-image-wrap">
-            <img src="assets/antes-depois-ilustrativo.png" alt="Comparação ilustrativa de textura da pele, sem representar uma paciente real" />
-            <span class="comparison-label label-before">Exemplo · antes</span>
-            <span class="comparison-label label-after">Exemplo · depois</span>
-            <span class="comparison-stamp">Imagem<br />ilustrativa</span>
+        <div class="results-track-wrap reveal" data-delay="100">
+          <div class="results-track" aria-label="Registros de antes e depois">
+            <figure class="result-card glass"><img src="assets/antes-depois-01.jpg" alt="Foto comparativa da pele antes e depois de uma sessão, registro 1" loading="lazy" /><figcaption>Registro de acompanhamento <span>01</span></figcaption></figure>
+            <figure class="result-card glass"><img src="assets/antes-depois-02.jpg" alt="Foto comparativa da pele antes e depois de uma sessão, registro 2" loading="lazy" /><figcaption>Registro de acompanhamento <span>02</span></figcaption></figure>
+            <figure class="result-card glass"><img src="assets/antes-depois-03.jpg" alt="Foto comparativa da pele antes e depois de uma sessão, registro 3" loading="lazy" /><figcaption>Registro de acompanhamento <span>03</span></figcaption></figure>
+            <figure class="result-card glass"><img src="assets/antes-depois-04.jpg" alt="Foto comparativa da pele antes e depois de uma sessão, registro 4" loading="lazy" /><figcaption>Registro de acompanhamento <span>04</span></figcaption></figure>
+            <figure class="result-card glass"><img src="assets/antes-depois-05.jpg" alt="Foto comparativa da pele antes e depois de uma sessão, registro 5" loading="lazy" /><figcaption>Registro de acompanhamento <span>05</span></figcaption></figure>
           </div>
-          <div class="comparison-caption">
-            <span class="caption-mark" aria-hidden="true">✳</span>
-            <p>Os resultados variam de pessoa para pessoa. Esta imagem é apenas uma referência visual para o protótipo.</p>
-            <span class="caption-index">01 / 01</span>
-          </div>
+          <p class="results-scroll-hint"><span aria-hidden="true">↔</span> Arraste para ver os outros registros</p>
+          <p class="results-disclaimer">Imagens compartilhadas pela profissional. Evolução, tempo e resultados variam de pessoa para pessoa.</p>
         </div>
       </section>
 
@@ -83,10 +81,56 @@
             </div>
           </div>
           <figure class="infographic-frame glass reveal" data-delay="200">
-            <div class="infographic-media wipe-in">
-              <img src="assets/cremes-estrias.webp" alt="Ilustração educativa sobre creme, superfície da pele e derme" />
+            <div class="motion-scene cream-scene">
+              <svg class="cream-svg" viewBox="0 0 800 500" role="img" aria-labelledby="cream-svg-title cream-svg-desc">
+                <title id="cream-svg-title">Animação ilustrativa da aplicação de creme</title>
+                <desc id="cream-svg-desc">Uma trilha luminosa de creme desliza sobre a superfície da pele sem representar uma mão. As camadas mais profundas aparecem abaixo.</desc>
+                <defs>
+                  <linearGradient id="cream-bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff9fc"/><stop offset="1" stop-color="#f9deeb"/></linearGradient>
+                  <linearGradient id="cream-skin" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#efb2c9"/><stop offset="1" stop-color="#f4c4ad"/></linearGradient>
+                </defs>
+                <rect width="800" height="500" rx="20" fill="url(#cream-bg)"/>
+                <text class="svg-kicker" x="48" y="46">CUIDADO NA SUPERFÍCIE</text>
+                <text class="svg-title" x="48" y="80">Ação do creme</text>
+                <g class="cream-slab">
+                  <path d="M48 233 Q190 216 325 232 T752 230 V374 H48Z" fill="url(#cream-skin)"/>
+                  <path d="M48 233 Q190 216 325 232 T752 230" fill="none" stroke="#a5467c" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M48 275 Q180 260 325 276 T752 273" fill="none" stroke="#d985a9" stroke-width="3" opacity=".7"/>
+                  <path d="M48 299 Q180 284 325 300 T752 297 M48 332 Q180 317 325 333 T752 330" fill="none" stroke="#c57b83" stroke-width="2" opacity=".45"/>
+                  <path d="M48 374 Q180 361 325 375 T752 373 V425 H48Z" fill="#f3d27f"/>
+                  <g class="deep-fibers" fill="none" stroke="#a5467c" stroke-width="3" opacity=".48">
+                    <path d="M70 346 C130 294 166 383 225 324 S321 365 378 317 S472 370 537 318 S633 371 724 317"/>
+                    <path d="M76 319 C127 372 172 300 228 359 S322 307 379 362 S472 307 540 362 S634 308 723 357"/>
+                  </g>
+                  <path class="stretch-mark" d="M557 231 C546 263 572 277 552 303 C538 322 568 343 550 373" fill="none" stroke="#a5467c" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+                </g>
+                <g class="cream-swipe">
+                  <path d="M160 224 C245 214 318 218 394 224 S525 222 577 218" fill="none" stroke="#fffafd" stroke-width="21" stroke-linecap="round"/>
+                  <path d="M160 224 C245 214 318 218 394 224 S525 222 577 218" fill="none" stroke="#f2c6dd" stroke-width="3" stroke-linecap="round"/>
+                </g>
+                <g class="cream-glint">
+                  <ellipse cx="165" cy="220" rx="27" ry="10" fill="#fff" fill-opacity=".72"/>
+                  <ellipse cx="165" cy="220" rx="13" ry="5" fill="#fff"/>
+                </g>
+                <g class="cream-jar" transform="translate(628 112)">
+                  <rect x="18" y="25" width="76" height="76" rx="15" fill="#fffafd" stroke="#a5467c" stroke-width="3"/>
+                  <rect x="12" y="15" width="88" height="17" rx="7" fill="#d887ad"/>
+                  <path d="M30 57 C39 44 69 43 82 57 C70 72 43 73 30 57Z" fill="#f4c5dc"/>
+                  <text class="svg-small" x="56" y="89" text-anchor="middle">CREME</text>
+                </g>
+                <g class="cream-drop-points" fill="#fffafd" stroke="#d887ad" stroke-width="2">
+                  <circle cx="274" cy="190" r="4"/><circle cx="350" cy="190" r="4"/><circle cx="426" cy="190" r="4"/>
+                </g>
+                <g class="cream-note note-top"><rect x="53" y="114" width="190" height="35" rx="17" fill="#ffffff" fill-opacity=".8"/><text class="svg-label" x="70" y="137">Hidratação superficial</text></g>
+                <g class="cream-note note-deep"><rect x="491" y="404" width="244" height="39" rx="18" fill="#ffffff" fill-opacity=".8"/><text class="svg-label" x="510" y="429">Derme: camada mais profunda</text></g>
+                <text class="svg-caption" x="52" y="471">A animação é educativa e não substitui avaliação profissional.</text>
+              </svg>
+              <div class="motion-steps cream-motion-steps" aria-hidden="true">
+                <span>01 · Creme aplicado</span><span>02 · Creme desliza</span><span>03 · Ação na superfície</span>
+              </div>
             </div>
-            <figcaption><span class="figcaption-icon">✦</span> Ilustração educativa <span class="figcaption-line"></span> Deslize a página para revelar</figcaption>
+            <details class="source-infographic"><summary>Ver a ilustração original enviada</summary><img src="assets/cremes-estrias.webp" alt="Infográfico enviado sobre a ação superficial dos cremes e as camadas da pele" /></details>
+            <figcaption><span class="figcaption-icon">✦</span> Animação educativa <span class="figcaption-line"></span> Toque visual baseado no material enviado</figcaption>
           </figure>
         </div>
       </section>
@@ -97,18 +141,70 @@
           <h2>Método <em>Microdreme</em></h2>
           <p>Uma visão ilustrativa das etapas apresentada no material enviado pela profissional.</p>
         </div>
-        <div class="method-ribbon" aria-label="Etapas ilustrativas do método Microdreme">
-          <div class="method-step reveal" data-delay="0"><span>01</span><p>Estria</p><small>Antes</small></div>
-          <i aria-hidden="true">→</i>
-          <div class="method-step reveal" data-delay="100"><span>02</span><p>Microagulhamento<br />& ativos</p><small>Permeabilidade de ativos</small></div>
-          <i aria-hidden="true">→</i>
-          <div class="method-step reveal" data-delay="200"><span>03</span><p>Pele cuidada</p><small>Depois</small></div>
-        </div>
         <figure class="method-image-card glass reveal" data-delay="150">
-          <div class="infographic-media wipe-in wipe-later">
-            <img src="assets/metodo-microdreme.webp" alt="Infográfico ilustrativo das três fases do método Microdreme: estria, microagulhamento e aplicação de ativos, e pele regenerada" />
+          <div class="method-panels motion-scene">
+            <article class="method-stage stage-one">
+              <header class="stage-heading"><span>FASE 1</span><h3>Estria</h3><p>Ponto de partida</p></header>
+              <svg class="stage-art" viewBox="0 0 320 245" role="img" aria-label="Corte ilustrativo da pele com estria aparente">
+                <rect width="320" height="245" rx="16" fill="#fff9fc"/>
+                <text class="layer-label" x="16" y="127">EPIDERME</text><text class="layer-label" x="16" y="164">DERME</text>
+                <rect x="74" y="97" width="220" height="121" rx="10" fill="#f2c2b5"/>
+                <rect x="74" y="97" width="220" height="35" fill="#ecaac4"/>
+                <path d="M74 99 Q122 94 157 101 Q188 108 205 98 Q242 91 294 98" fill="none" stroke="#a5467c" stroke-width="5" stroke-linecap="round"/>
+                <path d="M77 132 H291" stroke="#d987a6" stroke-width="3" opacity=".75"/>
+                <path d="M83 160 C111 141 128 181 158 156 S202 179 230 154 S267 174 289 154 M82 193 C111 175 131 210 160 186 S204 207 232 184 S267 203 289 184" fill="none" stroke="#bd7d8e" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+                <path class="stria-mark" d="M188 98 C179 119 198 132 185 151 C176 166 198 183 185 203" fill="none" stroke="#8e3b69" stroke-width="11" stroke-linecap="round"/>
+                <path d="M187 102 C184 116 193 126 188 137" fill="none" stroke="#fff0f7" stroke-width="3" stroke-linecap="round"/>
+                <rect x="74" y="218" width="220" height="18" rx="8" fill="#f3d27f"/>
+              </svg>
+              <p class="stage-caption">A ilustração destaca uma marca e as camadas da pele.</p>
+            </article>
+            <article class="method-stage stage-two">
+              <header class="stage-heading"><span>FASE 2</span><h3>Microagulhamento & ativos</h3><p>Representação do dermógrafo</p></header>
+              <svg class="stage-art" viewBox="0 0 320 245" role="img" aria-label="Dermógrafo com a agulha em movimento e gotas de ativos entrando em microcanais">
+                <rect width="320" height="245" rx="16" fill="#fff9fc"/>
+                <text class="layer-label" x="16" y="159">PELE</text>
+                <rect x="42" y="137" width="252" height="82" rx="9" fill="#f2c2b5"/>
+                <rect x="42" y="137" width="252" height="24" fill="#ecaac4"/>
+                <path d="M42 139 H294" stroke="#a5467c" stroke-width="4" stroke-linecap="round"/>
+                <path d="M49 183 C77 164 98 200 128 179 S178 198 208 177 S261 198 289 178" fill="none" stroke="#bd7d8e" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+                <g class="microchannels" fill="none" stroke="#004afd" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round"><path d="M153 140 V185"/><path d="M160 140 V197"/><path d="M167 140 V183"/></g>
+                <g class="dermograph-body">
+                  <rect x="134" y="27" width="52" height="61" rx="24" fill="#fff" stroke="#a5467c" stroke-width="4"/>
+                  <path d="M141 42 H179 M141 49 H179 M141 56 H179" stroke="#d786aa" stroke-width="3" stroke-linecap="round"/>
+                  <rect x="140" y="16" width="40" height="22" rx="10" fill="#d786aa" stroke="#a5467c" stroke-width="3"/>
+                  <path d="M138 84 H182 L173 105 H147Z" fill="#e3d4e0" stroke="#a5467c" stroke-width="3"/>
+                  <path d="M143 77 H177" stroke="#a5467c" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <g class="needle-only"><path d="M160 103 V145" stroke="#004afd" stroke-width="3" stroke-linecap="round"/><path d="M155 140 L160 149 L165 140Z" fill="#004afd"/></g>
+                <g class="active-drops" fill="#004afd"><path d="M148 117 C140 128 142 134 148 134 C154 134 156 128 148 117Z"/><path d="M172 119 C164 130 166 136 172 136 C178 136 180 130 172 119Z"/></g>
+                <circle class="needle-contact" cx="160" cy="141" r="11" fill="none" stroke="#004afd" stroke-width="2"/>
+                <rect x="42" y="219" width="252" height="17" rx="8" fill="#f3d27f"/>
+              </svg>
+              <p class="stage-caption">Apenas a agulha se move; as gotas representam os ativos.</p>
+            </article>
+            <article class="method-stage stage-three">
+              <header class="stage-heading"><span>FASE 3</span><h3>Pele recuperada</h3><p>Resultado ilustrativo</p></header>
+              <svg class="stage-art" viewBox="0 0 320 245" role="img" aria-label="Corte ilustrativo de pele com superfície mais uniforme e fibras organizadas">
+                <rect width="320" height="245" rx="16" fill="#fff9fc"/>
+                <text class="layer-label" x="16" y="127">EPIDERME</text><text class="layer-label" x="16" y="164">DERME</text>
+                <rect x="74" y="97" width="220" height="121" rx="10" fill="#f2c2b5"/>
+                <rect x="74" y="97" width="220" height="35" fill="#ecaac4"/>
+                <path d="M74 99 Q128 96 183 99 T294 98" fill="none" stroke="#a5467c" stroke-width="5" stroke-linecap="round"/>
+                <path d="M77 132 H291" stroke="#d987a6" stroke-width="3" opacity=".75"/>
+                <g class="organized-fibers" fill="none" stroke-width="4" stroke-linecap="round">
+                  <path d="M82 155 C112 144 136 144 163 155 S214 166 243 155 S273 145 288 153" stroke="#a5467c"/>
+                  <path d="M82 174 C112 163 136 163 163 174 S214 185 243 174 S273 164 288 172" stroke="#d879a2"/>
+                  <path d="M82 193 C112 182 136 182 163 193 S214 204 243 193 S273 183 288 191" stroke="#b88794"/>
+                  <path d="M116 148 V199 M157 149 V202 M200 158 V205 M246 151 V199" stroke="#fff4f9" stroke-width="3"/>
+                </g>
+                <rect x="74" y="218" width="220" height="18" rx="8" fill="#f3d27f"/>
+              </svg>
+              <p class="stage-caption">Etapa representada de forma educativa; cada caso é individual.</p>
+            </article>
           </div>
-          <figcaption><span class="figcaption-icon">✦</span> Infográfico ilustrativo do método <span class="figcaption-line"></span> Conteúdo sujeito à avaliação profissional</figcaption>
+          <details class="source-infographic"><summary>Ver o infográfico original enviado</summary><img src="assets/metodo-microdreme.webp" alt="Infográfico enviado com as fases do método Microdreme" /></details>
+          <figcaption><span class="figcaption-icon">✦</span> Animação explicativa <span class="figcaption-line"></span> Representação educativa, sem promessa de resultado</figcaption>
         </figure>
         <div class="method-footnote reveal"><span class="attention-mark">!</span><p>As imagens são ilustrativas e não garantem um resultado específico. Cada caso precisa de avaliação individual.</p></div>
       </section>
@@ -117,26 +213,23 @@
         <div class="section-heading reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span> Experiências de cuidado</p>
           <h2>Palavras que acolhem.</h2>
-          <p>Estes relatos são modelos de conteúdo e serão trocados por depoimentos reais autorizados.</p>
+          <p>Mensagens reais enviadas por pacientes, exibidas como prints do WhatsApp.</p>
         </div>
         <div class="testimonial-grid">
           <article class="testimonial-card glass reveal" data-delay="0">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <p>Me senti acolhida e recebi explicações claras sobre cada etapa do atendimento.</p>
-            <footer><span class="avatar-placeholder">C</span><span><strong>Cliente de exemplo</strong><small>Relato fictício · substituir</small></span><span class="stars">EXEMPLO</span></footer>
+            <div class="whatsapp-print-label"><span aria-hidden="true">◉</span> Print de conversa · WhatsApp</div>
+            <img class="testimonial-print" src="assets/depoimento-whatsapp-01.jpg" alt="Print de uma mensagem de paciente elogiando as explicações e o atendimento de Samara no WhatsApp" loading="lazy" />
           </article>
           <article class="testimonial-card glass reveal" data-delay="120">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <p>O atendimento foi cuidadoso e pude conversar sobre minhas dúvidas com tranquilidade.</p>
-            <footer><span class="avatar-placeholder">C</span><span><strong>Cliente de exemplo</strong><small>Relato fictício · substituir</small></span><span class="stars">EXEMPLO</span></footer>
+            <div class="whatsapp-print-label"><span aria-hidden="true">◉</span> Print de conversa · WhatsApp</div>
+            <img class="testimonial-print" src="assets/depoimento-whatsapp-02.jpg" alt="Print de uma mensagem de paciente relatando sua percepção de melhora no umbigo no WhatsApp" loading="lazy" />
           </article>
           <article class="testimonial-card glass reveal" data-delay="240">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <p>Gostei da atenção e do acompanhamento durante o processo.</p>
-            <footer><span class="avatar-placeholder">C</span><span><strong>Cliente de exemplo</strong><small>Relato fictício · substituir</small></span><span class="stars">EXEMPLO</span></footer>
+            <div class="whatsapp-print-label"><span aria-hidden="true">◉</span> Print de conversa · WhatsApp</div>
+            <img class="testimonial-print" src="assets/depoimento-whatsapp-03.jpg" alt="Print de uma mensagem de paciente falando sobre a percepção da pele e o acompanhamento no WhatsApp" loading="lazy" />
           </article>
         </div>
-        <p class="demo-disclaimer reveal">Depoimentos fictícios usados somente neste protótipo.</p>
+        <p class="demo-disclaimer reveal">Os prints foram recortados para destacar as mensagens e manter visível o visual de conversa do WhatsApp.</p>
       </section>
 
       <section class="contact-section" id="contato">
@@ -146,16 +239,15 @@
           <h2>Seu próximo passo começa com uma conversa.</h2>
           <p>Entre em contato para conhecer o atendimento e tirar suas dúvidas sobre o método Microdreme.</p>
           <div class="contact-actions">
-            <button class="button button-primary contact-placeholder" type="button" data-channel="WhatsApp">WhatsApp <span aria-hidden="true">↗</span></button>
-            <button class="button button-outline contact-placeholder" type="button" data-channel="Instagram">Instagram <span aria-hidden="true">↗</span></button>
+            <a class="button button-primary" href="https://wa.me/5547933849517?text=Ol%C3%A1%20Samara%2C%20tudo%20bem%3F%20gostaria%20de%20saber%20mais%20sobre%20o%20metodo%20microderme%20e%20marcar%20uma%20sess%C3%A3o" target="_blank" rel="noopener noreferrer">WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://www.instagram.com/samarafk_tratamentoestrias/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
           </div>
-          <small class="contact-hint">Links oficiais serão adicionados quando você os enviar.</small>
+          <small class="contact-hint">Fale diretamente com Samara para tirar suas dúvidas e agendar.</small>
         </div>
-        <div class="contact-signature glass reveal" data-delay="150">
-          <img src="assets/logo-marca.png" alt="" />
-          <span>Samara F. Krevei</span>
-          <small>Estrias · Cicatrizes · Estética</small>
-        </div>
+        <figure class="contact-portrait glass reveal" data-delay="150">
+          <img src="assets/esteticista-samara-retrato.jpg" alt="Samara sorrindo no consultório, usando luvas de atendimento" loading="lazy" />
+          <figcaption><strong>Samara F. Krevei</strong><span>Estrias · Cicatrizes · Estética</span></figcaption>
+        </figure>
       </section>
     </main>
 
